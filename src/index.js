@@ -5,6 +5,9 @@ import ReactDOM from "react-dom";
 // TailWind Style
 import "./index.css";
 
+// Container
+import * as Containers from "./Containers";
+
 // Redux Modules
 import store from "./Redux/store";
 import { Provider } from "react-redux";
@@ -24,9 +27,8 @@ ReactDOM.render(
       <Provider store={store}>
         <PersistGate loading={null} persistor={persistor}>
           <Routes>
-            <Route exact path="/">
-              asd
-            </Route>
+            {/* 테스트 컨테이너 */}
+            <Route path="/" element={<Containers.TestContainer />} />
           </Routes>
         </PersistGate>
       </Provider>
